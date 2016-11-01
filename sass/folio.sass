@@ -10,6 +10,18 @@
 @import _footer
 
 // 공통 스타일 영역
+=fontello($code, $size: 1rem, $color: #fff)
+  &::after
+    content: $code
+    color: $color
+    font:
+      family: 'fontello'
+      size: $size
+
+%ir
+  text-indent: -9999px
+  overflow: hidden
+
 .a11y-hide
   text-indent: -9999px
   overflow: hidden
@@ -29,6 +41,7 @@ button
   border: 0
   background: transparent
   cursor: pointer
+  
 a
   text-decoration: none
   &:link,
