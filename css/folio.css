@@ -235,9 +235,10 @@ template {
 /* '\e803' : arrow */
 .header {
   position: relative;
-  width: 75rem;
-  height: 80rem;
-  background-image: url("../images/bg-main-banner.png");
+  width: 100%;
+  background: url("../images/bg-main-banner-m.jpg") no-repeat center;
+  background-size: cover;
+  padding-bottom: 106.53333%;
 }
 
 .header .logo {
@@ -253,12 +254,21 @@ template {
   font-size: 3.4rem;
 }
 
+.header .logo.menu-on {
+  z-index: 999;
+}
+
+.header .logo.menu-on::after {
+  content: "";
+  color: #000;
+  font-family: 'fontello';
+  font-size: 3.4rem;
+}
+
 .header .btn-hambuger {
   position: absolute;
   top: 3.3rem;
   right: 2.9rem;
-  width: 3.2rem;
-  height: 2.3rem;
 }
 
 .header .btn-hambuger::after {
@@ -266,6 +276,17 @@ template {
   color: #fff;
   font-family: 'fontello';
   font-size: 2.3rem;
+}
+
+.header .btn-hambuger.menu-on {
+  z-index: 999;
+}
+
+.header .btn-hambuger.menu-on::after {
+  content: "";
+  color: #000;
+  font-family: 'fontello';
+  font-size: 3rem;
 }
 
 .header .main-title {
@@ -283,6 +304,59 @@ template {
   color: #fff;
   font-family: 'fontello';
   font-size: 2.3rem;
+}
+
+.header .drop-menu {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 20rem;
+  width: 100%;
+  background: #fff;
+  z-index: 99;
+}
+
+.header .drop-menu ul {
+  margin-top: 15.4rem;
+}
+
+.header .drop-menu li {
+  margin-bottom: 7.7rem;
+  text-align: center;
+}
+
+.header .drop-menu a {
+  font-family: 'Aileron Light';
+  font-size: 2.8rem;
+  line-height: 1.29;
+  color: #18191a;
+}
+
+.header .drop-menu.on {
+  display: block;
+}
+
+@media only screen and (min-width: 751px) and (max-width: 1024px) {
+  .header {
+    background: url("../images/bg-main-banner-t.jpg") no-repeat center;
+    background-size: cover;
+    padding-bottom: 66.40625%;
+  }
+  .header .main-title {
+    font-size: 6rem;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  .header {
+    background: url("../images/bg-main-banner-d.jpg") no-repeat center;
+    background-size: cover;
+    padding-bottom: 51.04167%;
+  }
+  .header .main-title {
+    font-size: 8rem;
+  }
 }
 
 .news {
@@ -393,6 +467,11 @@ html {
 body {
   font-size: 1em;
   font-family: 'Aileron Regular';
+}
+
+ul {
+  padding: 0;
+  list-style: none;
 }
 
 button {
