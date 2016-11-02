@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta charset="UTF-8">
+  <title>CSS 플렉시블 박스 그리드 시스템</title>
+  <link rel="stylesheet" href="css/normalize.min.css">
+  <!-- <link rel="stylesheet" href="css/flex-grid-system.css"> -->
+  <link rel="stylesheet" href="css/flex-grid-direction-column-system.css">
+  <link rel="stylesheet" href="css/rwd.css">
+  <style>
+    /*.page { background: #000; min-height: 300px; margin-bottom: 20px; }*/
+
+    .grid {
+      height: 200vw;
+    }
+    .cell{
+      width: 50%;
+    }
+
+    /*@media only screen and (min-width: 75em) {*/
+    @media only screen and (min-width: 1025px) {
+      .grid {
+        height: 75vw;
+      }
+      .cell{
+        width: 25%;
+      }
+    }
+
+
+
+    .box {
+      /*height: 375px;*/
+      border: 1px solid #e3e3e3;
+    }
+    .box-double {
+      /*height: 75px;*/
+    }
+    /*51.2px*/
+
+    .box:first-child  { background: #ffd219; }
+    .box:nth-child(2) { background: #fc5315; }
+    .box:nth-child(3) { background: #6000fb; }
+    .box:nth-child(4) { background: #f700de; }
+    .box:nth-child(5) { background: #f70053; }
+    .box:nth-child(6) { background: #21ff11; }
+    .box:nth-child(7) { background: #ffd219; }
+    .box:nth-child(8) { background: #fc5315; }
+    .box:nth-child(9) { background: #6000fb; }
+  </style>
+</head>
+<body>
+
+  <div class="grid-container">
+    <div class="page grid gird-direction-column">
+      <div class="box cell cell-m-1-4 cell-t-1-4 cell-d-1-3">DESIGN Book</div>
+      <div class="box cell cell-m-hidden cell-t-hidden cell-d-2-3">Leite</div>
+      <div class="box cell cell-m-1-4 cell-t-1-4 cell-d-1-3 d-order-5">KAE Brand Identity</div>
+      <div class="box cell cell-m-hidden cell-t-hidden cell-d-2-3 d-order-6">Eleia</div>
+      <div class="box cell cell-m-1-2 cell-t-1-2 m-order-3 d-order-7">BURO</div>
+      <div class="box cell cell-m-1-2 cell-t-1-2 cell-d-2-3 m-order-4 d-order-3">PAPERBOY WINERY</div>
+      <div class="box cell cell-m-1-4 cell-t-1-4 cell-d-1-3 m-order-5 d-order-4">Paper on hands</div>
+      <div class="box cell cell-m-1-4 cell-t-1-4 m-order-6 d-order-8">Envelope</div>
+    </div>
+      <!-- <div class="box cell cell-m-1-2">PAPERBOY WINERY</div> -->
+  </div>
+
+</body>
+</html>

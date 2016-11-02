@@ -1,0 +1,12 @@
+=fontello($code, $size: 1rem, $color: #fff)
+  &::after
+    content: $code
+    color: $color
+    font:
+      family: 'fontello'
+      size: $size
+
+=rwd-bg($url, $width, $height)
+  background: url($url) no-repeat center
+    size: cover
+  padding-bottom: ($height/$width*100) + %
