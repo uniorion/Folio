@@ -459,6 +459,13 @@ ol.grid {
 }
 
 @font-face {
+  font-family: 'Aileron SemiBold';
+  src: url("../fonts/Aileron-SemiBold.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'fontello';
   src: url("../fonts/fontello.eot?56909078");
   src: url("../fonts/fontello.eot?56909078#iefix") format("embedded-opentype"), url("../fonts/fontello.woff2?56909078") format("woff2"), url("../fonts/fontello.woff?56909078") format("woff"), url("../fonts/fontello.ttf?56909078") format("truetype"), url("../fonts/fontello.svg?56909078#fontello") format("svg");
@@ -470,6 +477,52 @@ ol.grid {
 /* '\e801' : menu-close */
 /* '\e802' : menu-open */
 /* '\e803' : arrow */
+.article-date {
+  font-size: 2rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.2);
+}
+
+@media only screen and (min-width: 751px) and (max-width: 1024px) {
+  .article-date {
+    font-size: 1.4rem;
+  }
+}
+
+.news h2, .twitter h2 {
+  font-family: "Aileron SemiBold", serif;
+  font-weight: 400;
+  font-size: 2.2rem;
+}
+
+@media only screen and (min-width: 751px) {
+  .news h2, .twitter h2 {
+    font-size: 1.8rem;
+  }
+}
+
+.news-articles p:nth-of-type(1) {
+  font-weight: 400;
+  font-size: 3.2rem;
+}
+
+@media only screen and (min-width: 751px) {
+  .news-articles p:nth-of-type(1) {
+    font-size: 2.6rem;
+  }
+}
+
+.twitter-articles article p:first-child {
+  font-weight: 400;
+  font-size: 2.2rem;
+}
+
+@media only screen and (min-width: 751px) {
+  .twitter-articles article p:first-child {
+    font-size: 1.8rem;
+  }
+}
+
 .header {
   position: relative;
   width: 100%;
@@ -768,6 +821,7 @@ ol.grid {
 
 .works .cell {
   width: 50%;
+  display: inline-flex;
 }
 
 .works .box2 p {
@@ -855,87 +909,259 @@ ol.grid {
 
 .works .rwd-img {
   width: 100%;
-  height: 100%;
+  height: auto;
   vertical-align: top;
+  display: inline-flex;
 }
 
 .news {
   display: flex;
-  background-color: #0b0b0b;
   color: #fff;
   line-height: 1.2;
+  padding-left: 8.8rem;
+  padding-right: 8.8rem;
+}
+
+@media only screen and (min-width: 751px) and (max-width: 1024px) {
+  .news {
+    padding-left: 11.2rem;
+    padding-right: 11.2rem;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  .news {
+    padding-left: 16rem;
+    padding-right: 16rem;
+  }
 }
 
 .news h2 {
-  flex: 0 1 10%;
-  flex-margin: 0;
-  font-family: "AileronSemiBold", serif;
-  font-size: 22px;
-  line-height: 1.2;
-  font-weight: 400;
+  flex: 0 0 auto;
+  margin: 0;
+  padding-top: 7.5rem;
+  width: 12.7rem;
 }
 
-@media only screen and (min-width: 751px) and (max-width: common-screen-max-width-t) {
+@media only screen and (min-width: 751px) and (max-width: 1024px) {
   .news h2 {
-    font-size: 1.8rem;
+    width: 16rem;
   }
 }
 
-.news .news-article {
-  flex: 0 1 90%;
-  margin: 0;
+@media only screen and (min-width: 1025px) {
+  .news h2 {
+    width: 22rem;
+  }
+}
+
+.news-articles {
+  flex: 0 1 auto;
   display: flex;
-  cursor: pointer;
+  padding-top: 7.5rem;
+  padding-bottom: 7.5rem;
 }
 
-.news .news-article p {
+.news-articles article {
+  padding-left: 1.6rem;
+  padding-right: 6rem;
+}
+
+@media only screen and (min-width: 751px) {
+  .news-articles article {
+    padding-left: 1rem;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  .news-articles article {
+    padding-left: 0;
+  }
+}
+
+.news-articles a {
+  display: block;
+}
+
+.news-articles a:link article, .news-articles a:visited article {
+  background: url("../images/icon-Arrow.svg") no-repeat 100% 25%;
+}
+
+@media only screen and (min-width: 751px) and (max-width: 1024px) {
+  .news-articles a:link article, .news-articles a:visited article {
+    background-position: 100% 40%;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  .news-articles a:link article, .news-articles a:visited article {
+    background-position: 100% 40%;
+  }
+}
+
+.news-articles a:hover article, .news-articles a:focus article {
+  background: url("../images/icon-Arrow-hover.svg") no-repeat 100% 25%;
+}
+
+@media only screen and (min-width: 751px) and (max-width: 1024px) {
+  .news-articles a:hover article, .news-articles a:focus article {
+    background-position: 100% 40%;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  .news-articles a:hover article, .news-articles a:focus article {
+    background-position: 100% 40%;
+  }
+}
+
+.news-articles a:nth-child(2) {
+  display: none;
+}
+
+@media only screen and (min-width: 1025px) {
+  .news-articles a {
+    flex: 0 1 50%;
+  }
+  .news-articles a article {
+    box-sizing: border-box;
+    width: 64rem;
+  }
+  .news-articles a:nth-child(1) article {
+    margin-right: 10rem;
+  }
+  .news-articles a:nth-child(2) {
+    display: block;
+  }
+}
+
+.news-articles p {
   margin: 0;
 }
 
-.news .news-article .article-title {
-  font-size: 3.2rem;
-  font-weight: 400;
+.news-articles p:nth-of-type(1) {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
   word-wrap: break-word;
 }
 
-@media only screen and (min-width: 751px) and (max-width: common-screen-max-width-t) {
-  .news .news-article .article-title {
-    font-size: 2.6rem;
+.twitter {
+  display: flex;
+  color: #fff;
+  line-height: 1.2;
+  padding-left: 8.8rem;
+  padding-right: 8.8rem;
+}
+
+@media only screen and (min-width: 751px) and (max-width: 1024px) {
+  .twitter {
+    padding-left: 11.2rem;
+    padding-right: 11.2rem;
   }
 }
 
-.news .news-article .article-date {
-  font-size: 2rem;
-  font-weight: 400;
-  color: rgba(255, 255, 255, 0.2);
-}
-
-@media only screen and (min-width: 751px) and (max-width: common-screen-max-width-t) {
-  .news .news-article .article-date {
-    font-size: 1.4rem;
+@media only screen and (min-width: 1025px) {
+  .twitter {
+    padding-left: 16rem;
+    padding-right: 16rem;
   }
 }
 
-.news .news-article .btn-view-detail {
-  width: 52px;
-  height: 32px;
-  background: #0b0b0b url("../images/icon-Arrow.svg") no-repeat right center;
-  border: 0;
+.twitter h2 {
+  flex: 0 0 auto;
+  margin: 0;
+  padding-top: 7.5rem;
+  width: 12.7rem;
+  box-sizing: border-box;
+  border-top: 2px solid #55acee;
 }
 
-.news .news-article:hover .btn-view-detail {
-  background: #0b0b0b url("../images/icon-Arrow-hover.svg") no-repeat right center;
+@media only screen and (min-width: 751px) and (max-width: 1024px) {
+  .twitter h2 {
+    width: 16rem;
+  }
 }
 
-.news .view-detail-wrap {
+@media only screen and (min-width: 1025px) {
+  .twitter h2 {
+    width: 22rem;
+  }
+}
+
+.twitter-articles {
   flex: 0 1 auto;
-  text-align: right;
+  display: flex;
+  padding-top: 1.5rem;
+  padding-bottom: 6.5rem;
+  box-sizing: border-box;
+  border-top: 2px solid #55acee;
+  flex-direction: column;
+}
+
+@media only screen and (min-width: 751px) {
+  .twitter-articles {
+    flex-direction: row;
+  }
+}
+
+.twitter-articles article {
+  padding-top: 6.0rem;
+  padding-left: 1.6rem;
+  box-sizing: border-box;
+}
+
+@media only screen and (min-width: 751px) and (max-width: 1024px) {
+  .twitter-articles article {
+    flex: 0 1 auto;
+    width: 32rem;
+  }
+  .twitter-articles article:nth-of-type(1) {
+    padding-left: 1rem;
+    padding-right: 5rem;
+  }
+  .twitter-articles article:nth-of-type(2) {
+    padding-left: 4rem;
+    padding-right: 2rem;
+  }
+  .twitter-articles article:nth-of-type(3) {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  .twitter-articles article {
+    flex: 0 1 auto;
+    width: 48rem;
+    padding-left: 0;
+  }
+  .twitter-articles article:nth-of-type(1) {
+    padding-right: 8rem;
+  }
+  .twitter-articles article:nth-of-type(2) {
+    padding-right: 6.3rem;
+  }
+  .twitter-articles article:nth-of-type(3) {
+    width: 42.2rem;
+  }
+}
+
+.twitter-articles article p {
+  margin: 0;
+}
+
+.twitter-articles article p:first-child {
+  padding-top: 0.5rem;
+  padding-bottom: 4rem;
+  word-wrap: break-word;
+}
+
+.twitter-articles article p a:link, .twitter-articles article p a:visited {
+  color: #55acee;
 }
 
 .footer {
   color: rgba(255, 255, 255, 0.2);
   font-family: 'Aileron Regular';
-  background-color: #0b0b0b;
 }
 
 .footer h2, .footer p, .footer li {
@@ -1026,6 +1252,7 @@ html {
 body {
   font-family: "Aileron Regular";
   font-size: 1em;
+  background-color: #0b0b0b;
 }
 
 ul {
