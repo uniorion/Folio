@@ -9,13 +9,13 @@
   </head>
   <body>
     <div class="container">
-      <header class="header">
+      <header class="header top-">
         <a href="#" class="logo" aria-describedby="logo-desc"></a>
         <span class="a11y-hide" id="logo-desc">Go Main</span>
         <a href="#" class="site">Showfol.io</a>
         <button type="button" class="btn-hambuger" aria-describedby="menu-state"></button>
         <span class="a11y-hide" id="menu-state">Menu was closed. When you click, menu is will open</span>
-        <nav class="main-menu">
+        <nav>
           <ul>
             <li><a href="#" class="on">Projects</a></li>
             <li><a href="#">About</a></li>
@@ -23,7 +23,21 @@
             <li><a href="#">Contact</a></li>
           </ul>
         </nav>
-        <ul class="carousel">
+      </header>
+
+      <div class="carousel">
+        <div class="slide">
+          <picture>
+            <source media="(max-width: 750px)" srcset="images/bg-main-banner-m.jpg">
+            <source media="(max-width: 1024px)" srcset="images/bg-main-banner-t.jpg">
+            <source media="(min-width: 1025px)" srcset="images/bg-main-banner-d.jpg">
+            <img src="images/bg-main-banner-d.jpg" alt="wally HOME Product">
+          </picture>
+          <a href="#" class="slide-title">
+            <p>We define and design purposeful brand experiences across channels.</p>
+          </a>
+        </div>
+        <ul>
           <li>
             <a href="#">
               <p>WallyHOME</p>
@@ -43,10 +57,7 @@
             </a>
           </li>
         </ul>
-        <a href="#" class="main-title">
-          <p>We define and design purposeful brand experiences across channels.</p>
-        </a>
-      </header>
+      </div>
 
       <div class="works">
         <div class="grid-column">
@@ -141,6 +152,7 @@
         </div>
       </div>
     </div>
+    <script src="js/header.js"></script>
     <script src="js/works.js"></script>
   </body>
 </html>
