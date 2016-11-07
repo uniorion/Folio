@@ -594,8 +594,44 @@ ol.grid {
   left: 0;
   width: 100%;
   z-index: 99;
-  height: 80vw;
+  animation: 0.1s show-top-menu;
   background: #fff;
+}
+
+@-webkit-keyframes show-top-menu {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 80vw;
+  }
+}
+
+@-moz-keyframes show-top-menu {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 80vw;
+  }
+}
+
+@-ms-keyframes show-top-menu {
+  .header nav 0% {
+    height: 0;
+  }
+  .header nav 100% {
+    height: 80vw;
+  }
+}
+
+@keyframes show-top-menu {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 80vw;
+  }
 }
 
 .header nav ul {
@@ -730,6 +766,39 @@ ol.grid {
     position: fixed;
     top: 0;
     left: 0;
+    animation: 0.2s show-top-menu;
+  }
+  @-webkit-keyframes show-top-menu {
+    0% {
+      height: 0;
+    }
+    100% {
+      height: 8.39844vw;
+    }
+  }
+  @-moz-keyframes show-top-menu {
+    0% {
+      height: 0;
+    }
+    100% {
+      height: 8.39844vw;
+    }
+  }
+  @-ms-keyframes show-top-menu {
+    .top-fix 0% {
+      height: 0;
+    }
+    .top-fix 100% {
+      height: 8.39844vw;
+    }
+  }
+  @keyframes show-top-menu {
+    0% {
+      height: 0;
+    }
+    100% {
+      height: 8.39844vw;
+    }
   }
   .top-fix .logo::after {
     content: "";
@@ -807,6 +876,39 @@ ol.grid {
     position: fixed;
     top: 0;
     left: 0;
+    animation: 0.2s show-top-menu;
+  }
+  @-webkit-keyframes show-top-menu {
+    0% {
+      height: 0;
+    }
+    100% {
+      height: 4.47917vw;
+    }
+  }
+  @-moz-keyframes show-top-menu {
+    0% {
+      height: 0;
+    }
+    100% {
+      height: 4.47917vw;
+    }
+  }
+  @-ms-keyframes show-top-menu {
+    .top-fix 0% {
+      height: 0;
+    }
+    .top-fix 100% {
+      height: 4.47917vw;
+    }
+  }
+  @keyframes show-top-menu {
+    0% {
+      height: 0;
+    }
+    100% {
+      height: 4.47917vw;
+    }
   }
   .top-fix .logo {
     margin-top: 0.9375%;

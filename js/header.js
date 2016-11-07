@@ -7,6 +7,19 @@
   var logo          = el_header.querySelector('.logo');
   var gnb           = el_header.querySelector('header nav');
 
+  /**
+   * 스크롤 세로 위치값을 반환
+   * @return {[type]} [description]
+   */ 
+  var getScrollY = function() {
+    if ( global.scrollY ) {
+      return global.scrollY;
+    }
+    else {
+      return global.scrollTop;
+    }
+  };
+
   global.onresize = function() {
     // 브라우저 width 감지하여 750px 초과 시 
     // gnb 메뉴가 열려 있으면 닫기
@@ -33,18 +46,15 @@
    */
   function fixTopMenu() {
     var device_width  = getWindowWidth();
-    var scroll_y      = getScrollY();
+    var scroll_y      = getScrollY() || 0;
     var cl_header     = el_header.getAttribute('class');
 
     if (scroll_y <= 86) {
       // fix 된 gnb 메뉴 제거
-      el_header.setAttribute( 'class', cl_header.replace(' top-fix', '') );
+      el_header.classList.remove( 'top-fix');
     }
-    else{
-      // gnb 메뉴 fix
-      if ( !isGnbFix() ) {
-        el_header.setAttribute( 'class', cl_header + ' top-fix' );
-      }
+    else {
+      el_header.classList.add( 'top-fix' );
     }
   }
 
@@ -77,15 +87,15 @@
 
     if ( cl_gnb.indexOf('on') > -1 ) {
       // 열림 상태 => 닫음
-      gnb.setAttribute( 'class', cl_gnb.replace('on', '') );
-      logo.setAttribute( 'class', cl_logo.replace('menu-on', '') );
-      btn_hambuger.setAttribute( 'class', cl_btn_hambuger.replace('menu-on', '') );
+      gnb.classList.remove('on');
+      logo.classList.remove('menu-on');
+      btn_hambuger.classList.remove('menu-on');
     } 
     else {
       // 닫힘 상태 => 열림
-      gnb.setAttribute( 'class', cl_gnb + ' on' );
-      logo.setAttribute( 'class', cl_logo + ' menu-on' );
-      btn_hambuger.setAttribute( 'class', cl_btn_hambuger + ' menu-on' );
+      gnb.classList.add('on');
+      logo.classList.add('menu-on');
+      btn_hambuger.classList.add('menu-on');
     }
   }
 
@@ -95,14 +105,6 @@
    */
   function getWindowWidth() {
       return global.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-  }
-  
-  /**
-   * 스크롤 세로 위치값을 반환
-   * @return {[type]} [description]
-   */
-  function getScrollY() {
-    return global.scrollY || global.pageYOfsset || global.scrollTop;
   }
 
 })(this);
