@@ -37,3 +37,36 @@
     $base-width: 1920
   //@debug $type + ':' + ($px/$base-width) * 100 + vw
   @return ($px/$base-width) * 100 + vw
+
+
+// position
+
+=absoluteAll($top, $right, $bottom, $left)
+  position: absolute
+  top: $top
+  right: $right
+  bottom: $bottom
+  left: $left
+=absoluteLeft($left)
+  position: absolute
+  left: $left
+
+=relative
+  position: relative
+
+//size: 오류 남.....
+// =size($num: null null) 
+//   @if length($num == 2)
+//     width: nth($num,1)
+//     height: nth($num,2)
+//   @if length($num == 1)
+//     width: nth($num,1)
+//     height: nth($num,1)
+
+=size($width,$height)
+  width: $width
+  height: $height
+
+=marginSameRL($margin-rl)
+  margin-right: $margin-rl
+  margin-left: $margin-rl
