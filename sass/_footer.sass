@@ -11,41 +11,34 @@
   .footer-content
     margin: 7rem 0 3.5rem 0
   .footer-box
-    margin-left: 8.8rem
-    margin-right: 8.8rem
-    position: relative
+    +marginSameRL(8.8rem)
+    +relative
     &::before
       content: ' '
-      position: absolute
-      top: 7rem
-      left: -5rem
-      width: 32px
-      height: 32px
+      +absoluteAll(7rem,0,0,-5rem)
+      +size(32px,32px)
       background: url("../images/logo-white.svg")no-repeat
     .social li:hover
       color: $grp-footer-dribble-color
     .contact li:hover
       color: $grp-footer-email-color
    
-
-  @media only screen and (min-width: 750px) and (max-width: 1024px)
+  @media only screen and (min-width: $common-screen-max-width-m + 1) and (max-width: $common-screen-max-width-t)
     & h2, & p, & li
       font-size: 1.8rem
     .footer-box
-      margin-left: 11.2rem
-      margin-right: 11.2rem
+      +marginSameRL(11.2rem)
       &::before
         top: 9rem
     .footer-content
       margin: 9rem 0 9rem 0
   
 
-  @media only screen and (min-width: 1025px)
+  @media only screen and (min-width: $common-screen-max-width-t+1)
     & h2, & p, & li
       font-size: 1.8rem
     .footer-box
-      margin-left: 16rem
-      margin-right: 16rem
+      +marginSameRL(16rem)
       &::before
         top: 9rem
     .footer-content

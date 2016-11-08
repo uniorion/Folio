@@ -12,7 +12,7 @@
       top: 40%
 
 
-  @media only screen and (min-width: 750 px) and (max-width: 1024px)
+  @media only screen and (min-width: $common-screen-max-width-m+1) and (max-width: $common-screen-max-width-t)
     .grid-column
       height: 200vw
     .cell
@@ -25,7 +25,7 @@
         top: 50%
   
   
-  @media only screen and (min-width: 1025px) 
+  @media only screen and (min-width: $common-screen-max-width-t+1) 
     .grid-column
       height: 78vw
     .cell 
@@ -38,31 +38,23 @@
         top: 50%
          
   .box2 
-    position: relative
+    +relative
     &:hover::before
       content: ' '
-      position: absolute
-      top: 0
-      left: 0
-      right: 0
-      bottom: 0
+      +absoluteAll(0,0,0,0)
       background: rgba(34,35,36,0.6)
   .box2-hover
     display: none
     p
-      position: absolute
+      +absoluteLeft(50%)
       width: 80%
       z-index: 2
       text-align: center
-      font-family: 'Aileron Regular'
-      left: 50%
       color: #fff
       transform: translateX(-50%)
     button
-      position: absolute
-      width: 54px
-      height: 23px
-      left: 50%
+      +absoluteLeft(50%)
+      +size(54px,23px)
       transform: translateX(-50%)
       box-sizing: border-box
       z-index: 2
