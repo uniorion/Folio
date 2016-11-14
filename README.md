@@ -46,4 +46,4 @@
  - 팀이 github, pull request, branch에 대해 성숙해진 것을 느낌.
  - 크롬의 고급설정에서 최하 폰트 사이즈에 대해서 제한할 수 있음을 알게 됨. 또한 폰트 값이 상대값으로 변동될 때 가장 작은 폰트 사이즈에 대해서 제한하여 가독성을 놓치지 않아야 함.
  - 스타일의 모듈화 및 HTML과의 결합도가 높아져 Sass의 depth가 깊어져서 유지보수가 어려움.
- - 야무(강사)님에게 요청한 News, Twitter 섹션을 보고 문제점들 인식(꼭 다시 제작해봐야함)[url](https://github.com/yamoo9/FDS/tree/master/2nd/DAY25/Folio)
+ - 야무(강사)님에게 요청한 News, Twitter 섹션을 보고 문제점들 인식(꼭 다시 제작해봐야함)[[Yamoo9/Folio]](https://github.com/yamoo9/FDS/tree/master/2nd/DAY25/Folio)
