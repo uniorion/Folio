@@ -33,7 +33,12 @@
     left: 0
     width: 100%
     z-index: 99
-    height: rwd-px2vw(600, m)
+    animation: 0.1s show-top-menu
+    +keyframes(show-top-menu)
+      0%
+        height: 0
+      100%
+        height: rwd-px2vw(600, m)
     background: #fff
     ul
       margin-top: px2per(143, 750)
@@ -89,6 +94,7 @@
         +font('Aileron Bold', 1.6rem)
       span  
         +font('Aileron Light', 1.4rem)
+
 @media only screen and (min-width: $common-screen-max-width-m + 1) and (max-width: $common-screen-max-width-t)
   .header
     height: rwd-px2vw(86, t)
@@ -120,6 +126,12 @@
     position: fixed
     top: 0
     left: 0
+    animation: 0.2s show-top-menu
+    +keyframes(show-top-menu)
+      0%
+        height: 0
+      100%
+        height: rwd-px2vw(86, t)
     .logo      
       +fontello('\e800', 3.4rem, #000)
     nav a
@@ -181,6 +193,12 @@
     position: fixed
     top: 0
     left: 0
+    animation: 0.2s show-top-menu
+    +keyframes(show-top-menu)
+      0%
+        height: 0
+      100%
+        height: rwd-px2vw(86, d)
     .logo
       margin-top: px2per(18, 1920)  
       +fontello('\e800', 3.4rem, #000)

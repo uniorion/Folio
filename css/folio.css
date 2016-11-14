@@ -594,8 +594,44 @@ ol.grid {
   left: 0;
   width: 100%;
   z-index: 99;
-  height: 80vw;
+  animation: 0.1s show-top-menu;
   background: #fff;
+}
+
+@-webkit-keyframes show-top-menu {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 80vw;
+  }
+}
+
+@-moz-keyframes show-top-menu {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 80vw;
+  }
+}
+
+@-ms-keyframes show-top-menu {
+  .header nav 0% {
+    height: 0;
+  }
+  .header nav 100% {
+    height: 80vw;
+  }
+}
+
+@keyframes show-top-menu {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 80vw;
+  }
 }
 
 .header nav ul {
@@ -730,6 +766,39 @@ ol.grid {
     position: fixed;
     top: 0;
     left: 0;
+    animation: 0.2s show-top-menu;
+  }
+  @-webkit-keyframes show-top-menu {
+    0% {
+      height: 0;
+    }
+    100% {
+      height: 8.39844vw;
+    }
+  }
+  @-moz-keyframes show-top-menu {
+    0% {
+      height: 0;
+    }
+    100% {
+      height: 8.39844vw;
+    }
+  }
+  @-ms-keyframes show-top-menu {
+    .top-fix 0% {
+      height: 0;
+    }
+    .top-fix 100% {
+      height: 8.39844vw;
+    }
+  }
+  @keyframes show-top-menu {
+    0% {
+      height: 0;
+    }
+    100% {
+      height: 8.39844vw;
+    }
   }
   .top-fix .logo::after {
     content: "";
@@ -807,6 +876,39 @@ ol.grid {
     position: fixed;
     top: 0;
     left: 0;
+    animation: 0.2s show-top-menu;
+  }
+  @-webkit-keyframes show-top-menu {
+    0% {
+      height: 0;
+    }
+    100% {
+      height: 4.47917vw;
+    }
+  }
+  @-moz-keyframes show-top-menu {
+    0% {
+      height: 0;
+    }
+    100% {
+      height: 4.47917vw;
+    }
+  }
+  @-ms-keyframes show-top-menu {
+    .top-fix 0% {
+      height: 0;
+    }
+    .top-fix 100% {
+      height: 4.47917vw;
+    }
+  }
+  @keyframes show-top-menu {
+    0% {
+      height: 0;
+    }
+    100% {
+      height: 4.47917vw;
+    }
   }
   .top-fix .logo {
     margin-top: 0.9375%;
@@ -865,7 +967,7 @@ ol.grid {
   top: 40%;
 }
 
-@media only screen and (min-width: 750 px) and (max-width: 1024px) {
+@media only screen and (min-width: 751px) and (max-width: 1024px) {
   .works .grid-column {
     height: 200vw;
   }
@@ -905,9 +1007,9 @@ ol.grid {
   content: ' ';
   position: absolute;
   top: 0;
-  left: 0;
   right: 0;
   bottom: 0;
+  left: 0;
   background: rgba(34, 35, 36, 0.6);
 }
 
@@ -917,20 +1019,19 @@ ol.grid {
 
 .works .box2-hover p {
   position: absolute;
+  left: 50%;
   width: 80%;
   z-index: 2;
   text-align: center;
-  font-family: 'Aileron Regular';
-  left: 50%;
   color: #fff;
   transform: translateX(-50%);
 }
 
 .works .box2-hover button {
   position: absolute;
+  left: 50%;
   width: 54px;
   height: 23px;
-  left: 50%;
   transform: translateX(-50%);
   box-sizing: border-box;
   z-index: 2;
@@ -1214,8 +1315,8 @@ ol.grid {
 }
 
 .footer .footer-box {
-  margin-left: 8.8rem;
   margin-right: 8.8rem;
+  margin-left: 8.8rem;
   position: relative;
 }
 
@@ -1223,6 +1324,8 @@ ol.grid {
   content: ' ';
   position: absolute;
   top: 7rem;
+  right: 0;
+  bottom: 0;
   left: -5rem;
   width: 32px;
   height: 32px;
@@ -1237,13 +1340,13 @@ ol.grid {
   color: #43f3d0;
 }
 
-@media only screen and (min-width: 750px) and (max-width: 1024px) {
+@media only screen and (min-width: 751px) and (max-width: 1024px) {
   .footer h2, .footer p, .footer li {
     font-size: 1.8rem;
   }
   .footer .footer-box {
-    margin-left: 11.2rem;
     margin-right: 11.2rem;
+    margin-left: 11.2rem;
   }
   .footer .footer-box::before {
     top: 9rem;
@@ -1258,8 +1361,8 @@ ol.grid {
     font-size: 1.8rem;
   }
   .footer .footer-box {
-    margin-left: 16rem;
     margin-right: 16rem;
+    margin-left: 16rem;
   }
   .footer .footer-box::before {
     top: 9rem;
