@@ -35,6 +35,17 @@
 
 ##2. 후기
 ### 진기
+- 반응형 웹에서 font size를 가변 단위로 할 경우 최소 사이즈를 고려해야 가독성을 잃지 않음.
+    - media query를 이용해서 각 font size를 설정. [[참고]](http://naradesign.net/wp/2014/11/06/2077/)
+    - font size가 레이아웃을 무너뜨리지 않는다면 고정값을 고려.
+- Mobile first 로 접근
+    - tablet, desktop 디자인을 고려하지 않아 마크업을 다시 작성함. Mobile first의 필요성을 아직 찾지 못했음.
+    - css 작성 시, mobile 스타일 먼저 작성하게 되는데, mobile에서 노출되지 않는 요소의 스타일을 어디서 작성할지 고민됨.
+- media query에 따라 변경되는 스타일은 media query를 한 곳에 작성 후 변경되는 스타일을 몰아 작성하는것이 아닌, 각 요소의 스타일이 정의되는 곳에 media query 별 스타일을 작성한다.
+- margin, padding 의 % 값은 부모 요소의 __width__ 값에 따라 가변함.
+- position % 값의 경우 left/right는 __width__ 값에 따라, top/bottom 은 부모 요소의 __height__ 값에 따라 가변함.
+- sass의 function, mixin 등은 여러 상황을 고려하지 않고 만들면 재사용성이 매우 떨어짐.
+- github의 pull request 방식의 협업에 대한 이해도가 약간 상승함.
 
 <br>
 ### 나예
